@@ -62,10 +62,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun setNextWordAndDescription() {
         val randomIndex = Random.nextInt(listOfWordAndDescription.size)
-        val randomWord = listOfWordAndDescription[randomIndex].word
-        val randomDescription = listOfWordAndDescription[randomIndex].desc
-        binding.cardFront.text = randomWord
-        binding.cardBack.text = randomDescription
+        listOfWordAndDescription[randomIndex].apply {
+            binding.cardFront.text = word
+            binding.cardBack.text = desc
+        }
     }
 
     data class WordDescription(
