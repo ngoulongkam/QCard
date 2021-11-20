@@ -12,15 +12,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var frontAnim: AnimatorSet
     private lateinit var backAnim: AnimatorSet
     private lateinit var binding: ActivityMainBinding
-    private var isFront = true
-
-    private val listOfWordAndDescription = listOf(
-        WordDescription("Abyssinian", "Coat colour: Reddish-brown with black ticking"),
-        WordDescription("Balinese", "Coat colour: Dark brown, blue, chocolate, lilac"),
-        WordDescription("Bengal", "Coat colour: Brown, snow, silver, blue"),
-        WordDescription("Birman", "Coat colour: Seal, blue, lilac, chocolate, red, cream"),
-        WordDescription("British", "Coat colour: white, black, blue, lilac, chocolate, red (single colour)")
-    )
+    private val revisionContent: RevisionContent = RevisionContent()
+    private var isFront = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,15 +54,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setNextWordAndDescription() {
-        val randomIndex = Random.nextInt(listOfWordAndDescription.size)
-        listOfWordAndDescription[randomIndex].apply {
+        val randomIndex = Random.nextInt(revisionContent.listOfLegislationContent.size)
+        revisionContent.listOfLegislationContent[randomIndex].apply {
             binding.cardFront.text = word
             binding.cardBack.text = desc
         }
     }
-
-    data class WordDescription(
-        val word: String,
-        val desc: String
-    )
 }
