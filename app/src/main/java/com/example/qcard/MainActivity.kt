@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var frontAnim: AnimatorSet
     private lateinit var backAnim: AnimatorSet
     private lateinit var binding: ActivityMainBinding
-    private var isFront = true
+    private var isFront = false
 
     private val listOfWordAndDescription = listOf(
         WordDescription("Animal Welfare Act 2006", "Effective from April 2007 in England and Wales, SECTION 9 places a duty of care on owner/keeper of animal to ensure they take reasonable steps to meet all animal welfare needs. Owner/ keeper must be over 16 years of age. Applies to all vertebrate animals, does not apply to an animal whilst in foetal or embryonic form. If Owner/keeper not complying, then fined up to £20,000, and 5- year imprisonment."),
