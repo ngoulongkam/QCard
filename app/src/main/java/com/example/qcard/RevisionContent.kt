@@ -26,9 +26,9 @@ class RevisionContent {
     )
 
     val listOfYears = listOf(
-        Year(1, yearOneListOfSubject),
-        Year(2, yearTwoListOfSubject),
-        Year(3, yearThreeListOfSubject)
+        Year("1st Year", yearOneListOfSubject),
+        Year("2nd Year", yearTwoListOfSubject),
+        Year("3rd Year", yearThreeListOfSubject)
     )
 
     data class WordDescription(
@@ -42,7 +42,7 @@ class RevisionContent {
     )
 
     data class Year(
-        val year: Int,
+        val year: String,
         val subject: List<SubjectDescription>
     )
 }
