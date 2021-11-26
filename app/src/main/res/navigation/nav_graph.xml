@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/yearFragment">
+
+    <fragment
+        android:id="@+id/yearFragment"
+        android:name="com.example.qcard.YearFragment"
+        android:label="Year"
+        tools:layout="@layout/fragment_year" >
+
+        <action
+            android:id="@+id/action_yearFragment_to_subjectFragment"
+            app:destination="@+id/subjectFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subjectFragment"
+        android:name="com.example.qcard.SubjectFragment"
+        android:label="Subject"
+        tools:layout="@layout/fragment_subject" >
+
+        <action
+            android:id="@+id/action_subjectFragment_to_revisionFragment"
+            app:destination="@+id/revisionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/revisionFragment"
+        android:name="com.example.qcard.RevisionFragment"
+        android:label="Revision"
+        tools:layout="@layout/fragment_revision" >
+    </fragment>
+
+</navigation>
